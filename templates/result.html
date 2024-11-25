@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Результат</title>
+<style>
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    text-align: center; /* Центрируем весь текст */
+}
+h1 {
+    color: #333;
+}
+
+p {
+  font-size: 1.2em; /*  увеличиваем размер текста */
+  margin-top: 20px;
+}
+
+a {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #007bff;
+    padding: 10px 20px;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Makes the image a block element so it takes up the full width */
+  margin: 20px auto; /* Centers the image */
+}
+
+    
+</style>
+</head>
+<body>
+
+<h1>Результат идентификации</h1>
+
+{% if result %}
+    <p>Идентифицированный пользователь: {{ result }}</p>
+{% else %}
+    <p>Голос не распознан</p>
+{% endif %}
+<a href="/">Вернуться на главную</a>
+</body>
+</html>
